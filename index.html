@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하루 시 한편</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/poem.css">
+    <link rel="stylesheet" href="../css/nav-item-a.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav-box">
+                <span class="title">시 하나</span>
+                <button class="nav-toggle" aria-label="메뉴 열기">☰</button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#poem-today">오늘의 시</a></li>
+                    <li class="nav-item"><a href="#poet-info">시인 소개</a></li>
+                    <li class="nav-item"><a href="#poet-words">시인의 말</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-content">
+            <section class="intro">
+                <h2>오늘의 시</h2>
+                <p class="subtext">하루를 시작하며, 마음을 가만히 열어보세요.</p>
+            </section>
+
+            <article class="poem" id="poem-today">  
+                <h3 class="poem-title">꽃</h3>
+                <p class="poet-name">김춘수</p>
+                <blockquote class="poem-text">
+                    내가 그의 이름을 불러주기 전에는<br>
+                    그는 다만<br>
+                    하나의 몸짓에 지나지 않았다.<br>
+                    <br>
+                    내가 그의 이름을 불러주었을 때,<br>
+                    그는 나에게로 와서<br>
+                    꽃이 되었다.<br>
+                    <br>
+                    내가 그의 이름을 불러준 것처럼<br>
+                    나의 이 빛깔과 향기에 알맞은<br>
+                    누가 나의 이름을 불러다오.<br>
+                    그에게로 가서 나도<br>
+                    그의 꽃이 되고 싶다.<br>
+                    <br>
+                    우리들은 모두<br>
+                    무엇이 되고 싶다.<br>
+                    너는 나에게 나는 너에게<br>
+                    잊혀지지 않는 하나의 눈짓이 되고 싶다.<br>
+                </blockquote>
+                <p class="tags">#존재 #불러줌 #사랑</p>
+            </article>
+            <section class="poet-info" id="poet-info">
+                <img src="../img/poet.png" alt="시인 김춘수" class="poet-image">
+                <div class="poet-info-text">
+                    <p>김춘수 시인은 1922년 경남 통영에서 태어나, 존재의 본질을 탐구하는 시로 많은 사랑을 받았습니다.</p>
+                    <p>대표작 「꽃」은 이름을 불러준다는 행위를 통해 존재를 완성하는 시로 널리 알려져 있습니다.</p>
+                    <p>경북대와 영남대에서 문학을 가르쳤으며, 한때 정치 활동에 참여했으나 스스로 후회하며 시에 전념했습니다.</p>
+                    <p>「샤갈의 마을에 내리는 눈」, 「꽃을 위한 서시」, 「강우」 등 그의 시는 교과서와 수능에도 자주 실렸습니다.</p>
+                    <p>2004년 타계했지만, 그의 시는 지금도 많은 이들의 마음에 잔잔한 울림을 남기고 있습니다.</p>
+                </div>
+            </section>
+            <div class="section-break">
+             <p>“시는 이름을 붙이는 일이다.<br>그리하여 존재하게 되는 일이다.”</p>
+            </div>
+            <section class="poet-words" id="poet-words">
+            <h3>시인의 말</h3>
+                <div class="quote-wrapper">
+                    <ul class="quote-list">
+                        <li>“내가 그의 이름을 불러주었을 때, 그는 나에게로 와서 꽃이 되었다.”</li>
+                        <li>“나는 너에게, 너는 나에게 잊히지 않는 하나의 눈짓이 되고 싶다.”</li>
+                        <li>“시는 사물의 이름을 붙여주는 일이다.”</li>
+                        <li>“존재란, 불려질 때 비로소 존재한다.”</li>
+                        <li>“나는 너에게, 너는 나에게 잊히지 않는 하나의 눈짓이 되고 싶다.”</li>
+                        <li>“시는 사라지는 것을 위한 의식이다.”</li>
+                        <li>“모든 사물은 그 이름을 얻기 전까지, 어둠 속에 있다.”</li>
+                        <li>“내 시는 사랑이 아니라 존재에 관한 것이다.”</li>
+                        <li>“나는 사물을 꽃으로 불러냈을 뿐이다.”</li>
+                        <li>“불러주는 순간, 세상은 새롭게 창조된다.”</li>
+                        <li>“시는 말을 넘어선 침묵의 형식이다.”</li>
+                    </ul>
+                     <div class="quote-indicators">
+                        <button data-index="0" class="active"></button>
+                        <button data-index="1"></button>
+                        <button data-index="2"></button>
+                        <button data-index="3"></button>
+                        <button data-index="4"></button>
+                        <button data-index="5"></button>
+                        <button data-index="6"></button>
+                        <button data-index="7"></button>
+                        <button data-index="8"></button>
+                        <button data-index="9"></button>
+                        <button data-index="10"></button>
+                    </div>
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        //새로고침
+        window.addEventListener("DOMContentLoaded", () => {
+            const hash = window.location.hash;
+            if (hash) {
+                history.replaceState(null, "", window.location.pathname);
+                setTimeout(() => {
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" }); 
+                }
+                }, 100); 
+            }
+        });
+        // 헤더 축소
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        // 시인의 말 (슬라이더)
+        const quoteList = document.querySelector('.quote-list');
+        const quotes = document.querySelectorAll('.quote-list li');
+        const indicators = document.querySelectorAll('.quote-indicators button');
+        const quoteWrapper = document.querySelector('.quote-wrapper'); // 슬라이더 전체 영역
+
+        let index = 0;
+        let intervalId = null;
+        // 버튼
+        function moveToIndex(i) {
+            index = i;
+            quoteList.style.transform = `translateX(-${index * 100}%)`;
+            indicators.forEach(btn => btn.classList.remove('active'));
+            indicators[index].classList.add('active');
+        }
+        indicators.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const i = parseInt(btn.dataset.index);
+                moveToIndex(i);
+            });
+        });
+        // 자동 전환
+        function startAutoSlide() {
+            intervalId = setInterval(() => {
+                const nextIndex = (index + 1) % quotes.length;
+                moveToIndex(nextIndex);
+            }, 5000);
+        }
+        function stopAutoSlide() {
+            clearInterval(intervalId);
+        }
+        quoteWrapper.addEventListener('mouseenter', stopAutoSlide);
+        quoteWrapper.addEventListener('mouseleave', startAutoSlide);
+        // 새로고침 초기화
+        startAutoSlide();
+        //모바일 대응
+        const toggleBtn = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        document.addEventListener('click', function (e) {
+        const isToggle = toggleBtn.contains(e.target);
+        const isMenu = navMenu.contains(e.target);
+        if (!isToggle && !isMenu) {
+            navMenu.classList.remove('active');
+        }
+        });
+    </script>
+</body>
+<button class="go-top" onclick="scrollToTop()">▲</button>
+
+</html>

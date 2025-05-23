@@ -1,0 +1,320 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nanum Myeongjo', serif;
+  background: linear-gradient(to right, #45678d 15%, #40829e 40%, #64C9CA 100%);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 16px;
+  height: 100%;
+}
+.container {
+  background: linear-gradient(to right, #45678d 15%, #40829e 40%, #64C9CA 100%);
+  width: 100%;
+  margin: 0 auto;
+  height: 2500px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.header.shrink {
+  height: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255,255,255,0.5);
+}
+.header.shrink .nav-box {
+  height: 60px;
+}
+.header.shrink .title {
+  font-size: 32px;
+  margin-bottom: 0;
+  transition: font-size 0.3s ease, margin 0.3s ease;
+  color: #45678d;
+}
+.header.shrink .nav-menu a {
+  color: #45678d;
+}
+.nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  height: 80px;
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: height 0.3s ease;
+}
+.title {
+  font-size: 64px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: font-size 0.3s ease, margin 0.3s ease;
+  display: block;
+  color: white;
+}
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* 본문 레이아웃 */
+.main-content,
+.poet-info,
+.quote-wrapper {
+  max-width: 800px;
+  width: 90%;
+  margin: 160px auto 0 auto;
+  padding: 40px 0;
+}
+.quote-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.poem {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 30px;
+  border-radius: 12px;
+  line-height: 2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+}
+.poem-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.poet-name {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+.poem-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.tags {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #c9e7f0;
+}
+.poem, .poet-info, .poet-words {
+  scroll-margin-top: 180px;
+  padding-top: 40px;
+  margin-bottom: 60px;
+}
+.poet-info {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 100px auto;
+}
+.poet-image {
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.poet-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+.poet-info-text {
+  max-width: 500px;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+}
+.section-break {
+  text-align: center;
+  margin: 100px auto 60px auto;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 700px;
+  padding: 150px 0;
+}
+.section-break::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  margin: 30px auto 0 auto;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.4), rgba(255,255,255,0));
+}
+/* 시인의 말 */
+.quote-list {
+  display: flex;
+  transition: transform 0.5s ease;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.quote-list li {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  font-style: italic;
+  padding: 20px;
+}
+.quote-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+.quote-indicators button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+.quote-indicators button.active {
+  background: #ffffff;
+  width: 18px;
+  height: 18px;
+}
+.quote-indicators button:hover {
+  transform: scale(1.2);
+}
+.next-quote {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* 위로 이동 버튼 */
+.go-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #45678d;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.go-top:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+/* 반응형 수정 */
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .nav-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .poet-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .poet-image {
+    width: 150px;
+  }
+  .poet-info-text {
+    text-align: center;
+  }
+  .quote-list li {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .go-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px 30px;
+    gap: 20px;
+    border-radius: 16px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color:#fff;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
